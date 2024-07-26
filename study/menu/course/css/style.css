@@ -1,0 +1,132 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(224, 224, 224);
+}
+.main {
+    
+
+}
+.main_container {
+    width: max-content;
+    
+    color: #eeeeee;
+}
+.bar_container {
+    display: flex;
+    flex-direction: column;
+}
+.bar_container :nth-child(1) {
+    /*flex: 1.66;*/
+}
+.bar_container :nth-child(2) {
+    /*flex: 8.44;*/
+}
+
+.left_bar {
+    color: #eeeeee;
+    height: 100vh;
+    background-color: #282837;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    position: fixed;
+    z-index: 1;
+    font-size: 15pt;
+    /*width: 16.66666666666667%;*/
+    
+   
+}
+.right_bar {
+    position: absolute;
+    left: 234.04px;
+    z-index: 0;
+    /*width: 83.33333333333333%*/
+    
+}
+.logo {
+    text-align: center;
+}
+.menu_bar {
+    display: flex;
+    flex-direction: column;
+}
+.menu {
+    display: inherit;
+    flex-direction: inherit;
+            
+}
+.menu a {
+    color: #eeeeee;
+    text-decoration: none;
+}
+.menu div {
+    margin-bottom: 5px;
+}
+.menu_title {
+    color: rgb(199, 198, 198);
+    font-size: 0.8rem;
+}
+.menu_detail_bar {
+    display: inherit;
+    flex-direction: inherit;
+    gap: 10px;
+    
+}
+.menu_detail {
+   
+}
+.header_info {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0px;
+    align-items: center;
+    border-bottom: 0.9px solid black;
+    background-color: white;
+    color: black;
+    
+    
+}
+.header_info .header_info_title {
+    margin-left: 20px;
+}
+.header_info .header_info_button {
+    background-color: #685FD4;
+    padding: 10px;
+}
+.index_iframe {
+    position: relative;
+    width: 100%;
+    height: 0%;
+}
+.index_iframe iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.iframe16To9 {
+    padding-top: 75%;
+}
+
+.width {
+    background-color: #685FD4;
+    height: 30px;
+}
+.info_container {
+    width: 1400px;
+    height: 100%;
+}
+button {
+    width: 300px;
+    z-index: 3;
+}
+.menu_detail:hover {
+    background-color: #FFBE00;
+  
+}

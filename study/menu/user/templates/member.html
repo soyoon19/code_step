@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: max-content;
+        }
+        .container {
+            background-color: white;
+            height: 100%;
+            gap: 10px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th {
+           
+        }
+        tr {
+            border-bottom: 1px solid rgb(224, 224, 224);
+        }
+        td {
+            text-align: center;
+        }
+        .info_table th {
+            width: 150px;
+        }
+        .info_th {
+            display: flex;
+            gap: 30px;
+        }
+        tbody tr:hover {
+            background-color: pink;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .container .user_info {
+            display: flex;
+            justify-content: space-between;
+        }
+        .info_header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(224, 224, 224);;
+            padding: 10px 0px;
+            align-items: center;
+        }
+        .info_header_title {
+            margin-left: 15px;
+        }
+        .info_header_button {
+            margin-right: 15px;
+        }
+        .info_header_button > a {
+            text-decoration: none;
+            color: gray;
+            font-size: 0.8rem
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info_header">
+            <div class="info_header_title">
+                members
+            </div>
+            <div class="info_header_button">
+                <a href="member.html" target="_blank">자세히 보기</a>
+            </div>
+        </div>
+        <div class="info_table">
+            <table>
+                <thead>
+                     <tr><th class="uid_th">uid</th><th class="name_th">name</th><th class="date_th">join_date</th><th class="point_th">point</th><th class="heart_th">heart</th></tr>
+                </thead>
+                <tbody>
+                     <tr>
+                         <td class="user1_uid uid_td">ANWOBZ</td><td class="user1_name name_td"><a href="user_admin.html">김태연</a></td><td class="user1_date date_td">20240719</td><td class="user1_point point_td">60</td><td class="user1_heart heart_td">3</td>
+                     </tr>
+                     <tr>
+                         <td class="user2_uid uid_td">ANWOBX</td><td class="user2_name name_td">김주홍</td><td class="user2_date date_td">20240719</td><td class="user2_point point_td">10</td><td class="user2_heart heart_td">0</td>
+                     </tr>
+                     <tr>
+                         <td class="user3_uid uid_td">ANWOBC</td><td class="user3_name name_td">김수현</td><td class="user3_date date_td">20240719</td><td class="user3_point point_td">1000</td><td class="user3_heart heart_td">2</td>
+                     </tr>
+                     <tr>
+                         <td class="user4_uid uid_td">ANWOBV</td><td class="user4_name name_td">김재원</td><td class="user4_date date_td">20240719</td><td class="user4_point point_td">399</td><td class="user4_heart heart_td">6</td>
+                     </tr>
+                     <tr>
+                         <td class="user5_uid uid_td">ANWOBB</td><td class="user5_name name_td">서정우</td><td class="user5_date date_td">20240719</td><td class="user5_point point_td">90</td><td class="user5_heart heart_td">4</td>
+                     </tr>
+                     <tr>
+                         <td class="user6_uid uid_td">ANWOBN</td><td class="user6_name name_td">최소윤</td><td class="user6_date date_td">20240719</td><td class="user6_point point_td">120</td><td class="user6_heart heart_td">5</td>
+                     </tr>
+                     
+                </tbody>
+             </table>
+        </div>
+        <div class="administarion">
+
+        </div>
+    </div>
+    
+    <!-- <div class="user_info">
+        <div class="info_th">
+            <div class="uid_div">
+                ASDFG
+            </div>
+            <div class="name_div">
+                김태연
+            </div>
+        </div>
+    </div> -->
+</body>
+</html>

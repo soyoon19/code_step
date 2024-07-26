@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c76c928bc4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(224, 224, 224);
+        }
+        .main {
+            
+
+        }
+        .main_container {
+            width: max-content;
+            
+            color: #eeeeee;
+        }
+        .bar_container {
+            display: flex;
+            flex-direction: column;
+        }
+        .bar_container :nth-child(1) {
+            /*flex: 1.66;*/
+        }
+        .bar_container :nth-child(2) {
+            /*flex: 8.44;*/
+        }
+        
+        .left_bar {
+            color: #eeeeee;
+            height: 100vh;
+            background-color: #282837;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            position: fixed;
+            z-index: 1;
+            font-size: 15pt;
+            /*width: 16.66666666666667%;*/
+            
+           
+        }
+        .right_bar {
+            position: absolute;
+            left: 234.04px;
+            z-index: 0;
+            /*width: 83.33333333333333%*/
+            
+        }
+        .logo {
+            text-align: center;
+        }
+        .menu_bar {
+            display: flex;
+            flex-direction: column;
+        }
+        .menu {
+            display: inherit;
+            flex-direction: inherit;
+                    
+        }
+        .menu a {
+            color: #eeeeee;
+            text-decoration: none;
+        }
+        .menu div {
+            margin-bottom: 5px;
+        }
+        .menu_title {
+            color: rgb(199, 198, 198);
+            font-size: 0.8rem;
+        }
+        .menu_detail_bar {
+            display: inherit;
+            flex-direction: inherit;
+            gap: 20px;
+            
+        }
+        .menu_detail {
+           
+        }
+        .header_info {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0px;
+            align-items: center;
+            border-bottom: 0.9px solid black;
+            background-color: white;
+            color: black;
+            
+            
+        }
+        .header_info .header_info_title {
+            margin-left: 20px;
+        }
+        .header_info .header_info_button {
+            background-color: #685FD4;
+            padding: 10px;
+        }
+        .index_iframe {
+            position: relative;
+            width: 100%;
+            height: 0%;
+        }
+        .index_iframe iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        .iframe16To9 {
+            padding-top: 75%;
+        }
+
+        .width {
+            background-color: #685FD4;
+            height: 30px;
+        }
+        .info_container {
+            width: 1400px;
+            height: 100%;
+        }
+        button {
+            width: 300px;
+            z-index: 3;
+        }
+        .menu_detail:hover {
+            background-color: #FFBE00;
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <div class="main">
+            <div class="bar_container">
+                <div class="left_bar">
+                    <div class="logo">
+                        <h2>CODE STEP</h2>
+                    </div>
+                    <div class="menu_bar">
+                        <div class="top_menu menu">
+                            <div class="menu_title">top menu</div>
+                            <div class="menu_detail_bar">
+                                <div class="menu_detail"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;사이트 바로가기</div>
+                                <div>1</div>
+                            </div>
+                        </div>
+                        <div class="middle_menu menu">
+                            <div class="menu_title">middle menu</div>
+                            <!-- main menu -->
+                            <div class="menu_detail_bar">
+                                <div class="menu_detail"><a href="../../menu/user/templates/user_index.html"><i class="fa-solid fa-user"></i>&nbsp;유저 관리</a></div>
+                                <div class="menu_detail"><a href="../../menu/course/templates/course_index.html "><i class="fa-solid fa-stairs"></i>&nbsp;코스 관리</a></div>
+                                <div class="menu_detail"><a href=""><i class="fa-regular fa-pen-to-square"></i>&nbsp;문제 관리</a></div>
+                                <div class="menu_detail"><a href=""><i class="fa-solid fa-ranking-star"></i>&nbsp;랭킹 관리</a></div>
+                                <div class="menu_detail"><i class="fa-solid fa-store"></i>&nbsp;상점 관리</div>
+                                <div class="menu_detail"><a href=""><i class="fa-solid fa-clipboard-question"></i>&nbsp;퀘스트 관리</a></div>
+                            </div>
+                        </div>
+                        <div class="bottom_menu menu">
+                            <div class="menu_title">bottom menu</div>
+                            <div class="menu_detail_bar">
+                                
+                                <div>3</div>
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_bar">
+                    <div class="header_info">
+                        <div class="header_info_title">
+                            사이트 바로가기
+                        </div>
+                        <div class="header_info_button">
+                            <a href="instergram_clone.html" target="_blank">바로가기</a>
+                        </div>
+                    </div>
+                    <div class="info_container">
+                        <div class="index_iframe iframe16To9">
+                            <iframe src="../../instergram_clone.html" frameborder="0" width="" height="" seamless="seamless"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <img src="..." class="rounded me-2" alt="...">
+                            <strong class="me-auto">Bootstrap</strong>
+                            <small>11 mins ago</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Hello, world! This is a toast message.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const toastElList = document.querySelectorAll('.toast')
+        const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, option))
+
+        const myToastEl = document.getElementById('myToast')
+        yToastEl.addEventListener('hidden.bs.toast', () => {
+        // do something...
+})
+    </script>
+    
+</body>
+</html>

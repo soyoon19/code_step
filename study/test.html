@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Box Generator</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Div Box Generator</h1>
+    <input type="number" id="boxCount" placeholder="Enter number of boxes">
+    <button onclick="generateBoxes()">Generate Boxes</button>
+    <div id="boxContainer" class="container">
+        
+    </div>
+
+    <script>
+        function generateBoxes() {
+            const boxContainer = document.getElementById('boxContainer');
+            boxContainer.innerHTML = ''; // Clear previous boxes
+
+            const count = parseInt(document.getElementById('boxCount').value);
+            if (isNaN(count) || count <= 0) {
+                alert('0이상의 숫자를 넣으시오');
+                return;
+            }
+
+            for (let i = 1; i <= count; i++) {
+                const div = document.createElement('div');
+                div.className = 'box';
+                div.innerText = i;
+                boxContainer.appendChild(div);
+            }
+        }
+    </script>
+</body>
+</html>
