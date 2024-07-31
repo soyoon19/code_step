@@ -4,5 +4,5 @@ import com.example.code_step.member.domain.Member;
 
 public interface Item {
     void use(Member member);
-
+    long getItemId();
 }
