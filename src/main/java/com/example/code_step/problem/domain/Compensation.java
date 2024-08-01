@@ -7,7 +7,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 @Builder
-public class Compensation {
+public class Compensation implements Comparable<Compensation> {
     private int exp;
     private int coin;
 
@@ -16,5 +16,20 @@ public class Compensation {
                 .exp(exp + target.getExp())
                 .coin(coin + target.getCoin())
                 .build();
+    }
+
+    public Compensation minus(Compensation target){
+        return Compensation.builder()
+                .coin(coin - target.getCoin())
+                .build();
+    }
+
+    @Override
+    public int compareTo(Compensation compensation) {
+        if(coin > compensation.coin)
+            return 1;
+        else if(coin < compensation.coin)
+            return -1;
+        return 0;
     }
 }
