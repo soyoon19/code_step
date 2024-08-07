@@ -1,12 +1,20 @@
 package com.example.code_step.step.domain;
 
+import com.example.code_step.problem.domain.Compensation;
 import com.example.code_step.problem.domain.Problem;
 
 import java.util.List;
 
-public class Step {
+public class Step implements Staged<Problem>{
     List<Problem> list;
-    public List<Problem> showProblem(){return list;}
-    public int givePoint(){return 1;}
-    public int giveMoney(){return 1;}
+
+    public Compensation getCompensation() {
+        return null;
+    }
+
+    @Override
+    public List<Problem> showStage() {
+        return list;
+    }
 }
+
