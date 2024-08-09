@@ -22,4 +22,8 @@ public class LanguageService {
 
         return languages;
     }
+
+    public void addLanguage(Language language) {
+        languageRepository.save(LanguageJpaEntity.from(language));
+    }
 }

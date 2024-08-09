@@ -1,8 +1,7 @@
 package com.example.code_step.member.domain;
 
 import com.example.code_step.item.domain.Inventory;
-import com.example.code_step.problem.domain.Compensation;
-import com.example.code_step.step.domain.Language;
+import com.example.code_step.step.domain.Compensation;
 import lombok.Getter;
 
 @Getter

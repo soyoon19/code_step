@@ -1,6 +1,6 @@
 package com.example.code_step.learning.infrastructure;
 
-import com.example.code_step.learning.domain.repository.LearningStepRepository;
+import com.example.code_step.learning.application.repository.LearningStepRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -14,5 +14,15 @@ public class LearningStepRepositoryImpl implements LearningStepRepository {
     @Override
     public List<LearningStepJpaEntity> findByLearningUnitId(Long learningUnitId) {
         return learningStepJpaRepository.findByLearningUnitId(learningUnitId);
+    }
+
+    @Override
+    public LearningStepJpaEntity findById(Long id) {
+        return learningStepJpaRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public boolean save(LearningStepJpaEntity learningStepJpaEntity) {
+        return learningStepJpaRepository.save(learningStepJpaEntity) != null;
     }
 }

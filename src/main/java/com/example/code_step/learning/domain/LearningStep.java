@@ -3,8 +3,10 @@ package com.example.code_step.learning.domain;
 import com.example.code_step.step.domain.Step;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 @Builder
 public class LearningStep {
     public static final int NO_CLEAR = 0;

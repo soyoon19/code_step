@@ -1,7 +1,7 @@
 package com.example.code_step.item.domain;
 
 import com.example.code_step.member.domain.Member;
-import com.example.code_step.problem.domain.Compensation;
+import com.example.code_step.step.domain.Compensation;
 
 public class ExpBuff implements Item{
     private float factor;

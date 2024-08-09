@@ -1,4 +1,4 @@
-package com.example.code_step.learning.domain.repository;
+package com.example.code_step.learning.application.repository;
 
 import com.example.code_step.learning.infrastructure.LearningLanguageJpaEntity;
 import org.springframework.stereotype.Component;

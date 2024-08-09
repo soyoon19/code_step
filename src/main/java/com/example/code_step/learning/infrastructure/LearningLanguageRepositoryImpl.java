@@ -1,7 +1,7 @@
 package com.example.code_step.learning.infrastructure;
 
 
-import com.example.code_step.learning.domain.repository.LearningLanguageRepository;
+import com.example.code_step.learning.application.repository.LearningLanguageRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -16,4 +16,6 @@ public class LearningLanguageRepositoryImpl implements LearningLanguageRepositor
     public List<LearningLanguageJpaEntity> findByUid(String uid) {
         return learningLanguageJpaRepository.getByUid(uid);
     }
+
+
 }

@@ -5,8 +5,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class LearningStepJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,5 +31,23 @@ public class LearningStepJpaEntity {
                 .learningUnitId(learningUnitId)
                 .id(id)
                 .build();
+    }
+
+    public static LearningStepJpaEntity from(LearningStep learningStep){
+        LearningStepJpaEntity entity =  LearningStepJpaEntity.builder()
+                .state(learningStep.getState())
+                .learningUnitId(learningStep.getLearningUnitId())
+                .stepId(learningStep.getStepId())
+                .build();
+
+        entity.id = learningStep.getId();
+        return entity;
+    }
+
+    @Builder
+    public LearningStepJpaEntity(int state, long learningUnitId, long stepId){
+        this.state = state;
+        this.learningUnitId = learningUnitId;
+        this.stepId = stepId;
     }
 }

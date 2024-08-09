@@ -15,4 +15,14 @@ public class LanguageRepositoryImpl implements LanguageRepository {
     public List<LanguageJpaEntity> findAll() {
         return languageJpaRepository.findAll();
     }
+
+    @Override
+    public boolean save(LanguageJpaEntity language) {
+        return languageJpaRepository.save(language) != null;
+    }
+
+    @Override
+    public LanguageJpaEntity findById(String id) {
+        return languageJpaRepository.findById(id).orElse(null);
+    }
 }

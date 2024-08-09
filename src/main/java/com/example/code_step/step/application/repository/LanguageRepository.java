@@ -8,4 +8,7 @@ import java.util.List;
 @Component
 public interface LanguageRepository {
     List<LanguageJpaEntity> findAll();
+    boolean save(LanguageJpaEntity language);
+    LanguageJpaEntity findById(String id);
+
 }

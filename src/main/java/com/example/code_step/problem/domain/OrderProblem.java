@@ -1,6 +1,7 @@
 package com.example.code_step.problem.domain;
 
 import com.example.code_step.member.domain.Member;
+import com.example.code_step.step.domain.Compensation;
 
 public class OrderProblem implements Problem{
 
