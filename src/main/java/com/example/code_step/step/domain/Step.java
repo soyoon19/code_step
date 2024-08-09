@@ -2,19 +2,16 @@ package com.example.code_step.step.domain;
 
 import com.example.code_step.problem.domain.Compensation;
 import com.example.code_step.problem.domain.Problem;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class Step implements Staged<Problem>{
-    List<Problem> list;
+    protected Compensation compensation;
 
-    public Compensation getCompensation() {
-        return null;
-    }
-
-    @Override
-    public List<Problem> showStage() {
-        return list;
-    }
+    protected long unitId;
+    protected long id;
+    protected long order;
 }
 

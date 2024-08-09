@@ -3,14 +3,9 @@ package com.example.code_step.step.domain;
 import java.util.List;
 
 public class Unit  implements Staged<Step>{
-    List<Step> steps;
+    private Long id;
+    private String title;
+    private int order;
+    private String languageId;
 
-    public void selectStep() {
-    }
-
-
-    @Override
-    public List<Step> showStage() {
-        return steps;
-    }
 }
