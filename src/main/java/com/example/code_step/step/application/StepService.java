@@ -31,9 +31,10 @@ public class StepService {
         return stepRepository.save(StepJpaEntity.form(step));
     }
 
-    public Step nextStep(Step step){
-        StepJpaEntity nextStepJpaEntity = stepRepository.findByUnitIdAndOrder(step.getUnitId(), step.getOrder() + 1);
-        return null; // nextStepJpaEntity.toModel();
+    public Long nextStep(Long stepId){
+        Step nowStep = null; // stepRepository.findById(stepId).toModel();
+        Step nextStep = null; // nextStepJpaEntity = stepRepository.findByUnitIdAndOrder(nowStep.getUnitId(), nowStep.getOrder() + 1).toModel();
+        return nextStep != null ? nextStep.getId() : null; // nextStepJpaEntity.toModel();
     }
 
 }

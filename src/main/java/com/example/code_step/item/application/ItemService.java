@@ -1,8 +1,12 @@
 package com.example.code_step.item.application;
 
+import com.example.code_step.core.CommonResult;
+import com.example.code_step.item.domain.Inventory;
 import com.example.code_step.item.domain.Item;
 import com.example.code_step.item.domain.repository.ItemRepository;
 import com.example.code_step.item.infrastructure.ItemJpaEntity;
+import com.example.code_step.member.application.repository.MemberRepository;
+import com.example.code_step.member.domain.Member;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ItemService {
     private final ItemRepository itemRepository;
+    private final MemberRepository memberRepository;
 
     public List<Item> findAll(){
         List<Item> items = new ArrayList<>();
@@ -21,5 +26,15 @@ public class ItemService {
             items.add(itemJpaEntity.toModel());
 
         return items;
+    }
+
+    public CommonResult useItem(String itemId, String uid){
+        Item item = itemRepository.findById(itemId).toModel();
+        Member member = memberRepository.findByUid(uid).toModel();
+        Inventory inventory = member.getInventory();
+
+        inventory.useItem(item, member);
+
+        return null;
     }
 }

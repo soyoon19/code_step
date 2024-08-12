@@ -20,6 +20,10 @@ public class Member {
     public void decreaseHeart(){ heart--; }
     public void increaseHeart(int up){  heart += up; }
 
+    public boolean isDie(){
+        return heart < 1;
+    }
+
     public void makeFriend(String uid){}
 
     public void addCompensation(Compensation compensation){

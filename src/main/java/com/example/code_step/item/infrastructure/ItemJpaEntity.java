@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 @Entity
 public class ItemJpaEntity {
     @Id
-    private int id;
+    private String id;
 
     public Item toModel(){
         return null;
