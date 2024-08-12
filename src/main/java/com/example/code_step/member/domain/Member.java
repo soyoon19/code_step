@@ -7,15 +7,17 @@ import lombok.Getter;
 @Getter
 public class Member {
     private float buffFactor = 1f;
-    private Compensation compensation;
     private int heart;
+
     private int age;
     private int study_count;
-
     private String username;
+    private String uid;
     private String gender;
 
     private Inventory inventory;
+    private Compensation compensation;
+
 
     public void decreaseHeart(){ heart--; }
     public void increaseHeart(int up){  heart += up; }

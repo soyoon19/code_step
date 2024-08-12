@@ -4,8 +4,7 @@ import com.example.code_step.member.domain.Member;
 
 import java.util.HashMap;
 
-public class
-Inventory {
+public class Inventory {
     private HashMap<Long, Stock> inventory = new HashMap<>();
 
     public boolean findItem(Item item) {
@@ -18,6 +17,7 @@ Inventory {
         //if(stock == null)
 
         stock.setCount(stock.getCount() - 1);
+        item.use(member);
 
         if (stock.getCount() == 0)
             inventory.remove(item.getItemId());

@@ -8,6 +8,8 @@ public class Store {
         if(!member.availabilityBuy(item.getCompensation()))
             return false;
 
+        member.minusCompensation(item.getCompensation());
+
         member.getInventory().addItem(item);
         return true;
     }
