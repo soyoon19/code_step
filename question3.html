@@ -35,12 +35,15 @@
             }
 
              div {
-                width: 920px;
+                width: 480px;
                 height: 60px;
                 background: white;
                 color: black;
                 position: relative;
                 left: 350px;
+                text-align: center;
+                display: inline-block;
+                margin-left: 3%;
             }
             small {
                 text-align: center;
@@ -59,10 +62,9 @@
                 font-size: 30px;
             }
             b {
-                font-size: 36px;
-                position: relative;
-                left: 25%;
-                top: 36%;
+                font-size: 32px;
+
+
             }
             .warning {
                 position: fixed;
@@ -88,7 +90,6 @@
                 width: 50px;
                 height: 50px;
                 position: relative;
-                
                 margin: 5px;
             }
             .what {
@@ -97,29 +98,62 @@
             }
             .main {
                 width: 1000px;
-                height: 250px;
+                height: 135px;
             }
             .choice {
                 left: 20.5%;
             }
-            .under {
-                position: relative;
-                left: 23%;
-                top: 10%;
-                text-align: center;
+            .left {
+                width: 400px;
+                height: 480px;
             }
-
+            .under {
+                margin: 10px;
+            }
+            .image {
+                position: relative;
+                top: 10%;
+                left: 21.5%;
+            }
         </style>
     </head>
     <body>
         <br><br><p><span><b class="choice">description</b></span></p>
-        <br><p><div class="main"><b>Select one that is NOT correct.</b></div></p>
-        <b class="choice">Choices</b>
-        <p><div style="float: left;"></div><img src="media2/red ball.png" width="20px" height="20px"></p>
-        <p><div style="float: left;"></div><img src="media2/blue ball.png" width="20px" height="20px"></p>
-        <p><div style="float: left;"></div><img src="media2/red ball.png" width="20px" height="20px"></p>
-        <p><div style="float: left;"></div><img src="media2/red ball.png" width="20px" height="20px"></p>
-        <p><div style="width:200px; height:55px; background: #eef300; color: black; float:left; margin-right:10px;"><b class="under">add</b></div>
+        <p><div class="main"><b>Write this sentence with these codes below.</b></div></p>
+        <p><b class="choice">answer</b></span></p>
+        <p><div style="float: left;" class="left"><b style="font-size: 16px;">
+            <p style="text-align: left;">#include <stdio.h>
+                <br>
+                int main(void)<br>
+                {<br>
+                    int number;<br>
+                    char name, symbol;<br>
+                    <br>
+                    printf("학과 :");<br>
+                    scanf_s("%s", &symbol);<br>
+                    <br>
+                    printf("학번: ");<br>
+                    scanf_s("%d", &number);<br>
+                    <br>
+                    printf("성명: ");<br>
+                    scanf_s("%s", &name);<br>
+                    <br>
+                    <br>
+                printf("당신은 %s,%d,%s 입니다.", symbol, number, name);<br>
+                <br>
+                return 0;<br>
+                <br>
+                }<br>
+            </p>
+        </b></div>
+        
+        <p><div style="float: left;"><b>stdio.h</b></div><img class="image" src="media2/blue ball.png"></p>
+        <p><div style="float: left;"><b>long</b></div><img class="image" src="media2/red ball.png"></p>
+        <p><div style="float: left;"><b>int</b></div><img class="image" src="media2/blue ball.png"></p>
+        <p><div style="float: left;"><b>%c</b></div><img class="image" src="media2/red ball.png"></p>
+        <p><div style="float: left;"><b>%d</b></div><img class="image" src="media2/blue ball.png"></p>
+        <p><div style="float: left;"><b>%s</b></div><img class="image" src="media2/blue ball.png"></p>
+        <div style="width:200px; height:55px; background: #eef300; color: black; float:left; margin-right:10px;"><b class="under">add</b></div>
             <div style="width:200px; height:55px; background: #eef300; color: black; float:left; margin-right:10px;"><b class="under">remove</b></div></p>
             <div style="width:200px; height:55px; background: #03a400; color: black; float:left; margin-right:10px;"><b class="under">save</b></div>
             

@@ -35,7 +35,7 @@
             }
 
              div {
-                width: 450px;
+                width: 920px;
                 height: 60px;
                 background: white;
                 color: black;
@@ -59,10 +59,10 @@
                 font-size: 30px;
             }
             b {
-                font-size: 32px;
+                font-size: 36px;
                 position: relative;
-                left: 25%;
-                top: 36%;
+                left: 27%;
+                top: 10%;
             }
             .warning {
                 position: fixed;
@@ -88,6 +88,7 @@
                 width: 50px;
                 height: 50px;
                 position: relative;
+                
                 margin: 5px;
             }
             .what {
@@ -96,7 +97,7 @@
             }
             .main {
                 width: 1000px;
-                height: 135px;
+                height: 250px;
             }
             .choice {
                 left: 20.5%;
@@ -107,20 +108,21 @@
                 top: 10%;
                 text-align: center;
             }
-
+            .image {
+                position: relative;
+                left: 21.5%;
+                top: 10%;
+            }
         </style>
     </head>
     <body>
         <br><br><p><span><b class="choice">description</b></span></p>
-        <p><div class="main"><b>Write this sentence with these codes below.</b></div></p>
-        <b class="choice">answer</b></span></p>
-        <p><div class="main"><b>printf    (    “   %d   원입니다   ”   ,   10000   )   ;</b></div></p>
-        
+        <br><p><div class="main"><b>Select one that is NOT correct.</b></div></p>
         <b class="choice">Choices</b>
-        <p><div></div><div style="float: right;"></div></p>
-        <p><div></div><div style="float: right;"></div></p>
-        <p><div></div><div style="float: right;"></div></p>
-        <p><div></div><div style="float: right;"></div></p>
+        <p><div style="float: left;"><b>Number => %d</b></div><img class="image" src="media2/red ball.png" width="20px" height="20px"></p>
+        <p><div style="float: left;"><b>Real Number=> %s</b></div><img class="image" src="media2/blue ball.png" width="20px" height="20px"></p>
+        <p><div style="float: left;"><b>Word=> %c</b></div><img class="image" src="media2/red ball.png" width="20px" height="20px"></p>
+        <p><div style="float: left;"><b>Pointer => %p</b></div><img class="image" src="media2/red ball.png" width="20px" height="20px"></p>
         <p><div style="width:200px; height:55px; background: #eef300; color: black; float:left; margin-right:10px;"><b class="under">add</b></div>
             <div style="width:200px; height:55px; background: #eef300; color: black; float:left; margin-right:10px;"><b class="under">remove</b></div></p>
             <div style="width:200px; height:55px; background: #03a400; color: black; float:left; margin-right:10px;"><b class="under">save</b></div>

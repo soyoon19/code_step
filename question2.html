@@ -41,6 +41,8 @@
                 color: black;
                 position: relative;
                 left: 350px;
+                display: inline-block;
+                margin-right: 98px;
             }
             small {
                 text-align: center;
@@ -59,9 +61,10 @@
                 font-size: 30px;
             }
             b {
-                font-size: 16px;
-
-
+                font-size: 32px;
+                position: relative;
+                left: 25%;
+                top: 36%;
             }
             .warning {
                 position: fixed;
@@ -100,26 +103,27 @@
             .choice {
                 left: 20.5%;
             }
-            .left {
-                width: 400px;
-                height: 480px;
-            }
             .under {
-                
+                position: relative;
+                left: 23%;
+                top: 10%;
+                text-align: center;
             }
+
         </style>
     </head>
     <body>
         <br><br><p><span><b class="choice">description</b></span></p>
         <p><div class="main"><b>Write this sentence with these codes below.</b></div></p>
-        <p><b class="choice">answer</b></span></p>
-        <p><div style="float: left;" class="left"><b>printf    (    “   %d   원입니다   ”   ,   10000   )   ;</b></div></p>
+        <b class="choice">answer</b></span></p>
+        <p><div class="main"><b>printf    (    “   %d   원입니다   ”   ,   10000   )   ;</b></div></p>
         
-        <p><div></div></p>
-        <p><div></div></p>
-        <p><div></div></p>
-        <p><div></div></p>
-        <div style="width:200px; height:55px; background: #eef300; color: black; float:left; margin-right:10px;"><b class="under">add</b></div>
+        <b class="choice">Choices</b>
+        <p><div style="float: left;"><b>printf</b></div><div><b>%d</b></div></p>
+        <p><div style="float: left;"><b>scanf</b></div><div><b>10000</b></div></p>
+        <p><div style="float: left;"><b>"</b></div><div><b>원입니다</b></div></p>
+        <p><div style="float: left;"><b>'</b></div><div><b>%s</b></div></p>
+        <p><div style="width:200px; height:55px; background: #eef300; color: black; float:left; margin-right:10px;"><b class="under">add</b></div>
             <div style="width:200px; height:55px; background: #eef300; color: black; float:left; margin-right:10px;"><b class="under">remove</b></div></p>
             <div style="width:200px; height:55px; background: #03a400; color: black; float:left; margin-right:10px;"><b class="under">save</b></div>
             
