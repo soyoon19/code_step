@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
-@Getter
 @Builder
 public record Compensation(long id, int exp, int coin) implements Comparable<Compensation> {
     public Compensation plus(Compensation target) {
