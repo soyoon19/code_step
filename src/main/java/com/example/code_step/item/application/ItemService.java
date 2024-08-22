@@ -30,7 +30,7 @@ public class ItemService {
 
     public CommonResult useItem(String itemId, String uid){
         Item item = itemRepository.findById(itemId).toModel();
-        Member member = memberRepository.findByUid(uid).toModel();
+        Member member = null; // Todo. MemberService 완성 후 다시 작성
         Inventory inventory = member.getInventory();
 
         inventory.useItem(item, member);

@@ -4,6 +4,7 @@ import com.example.code_step.member.domain.Member;
 import com.example.code_step.step.domain.Compensation;
 
 public class Heart implements Item{
+    private String id;
     private Compensation compensation;
 
     @Override
@@ -12,8 +13,8 @@ public class Heart implements Item{
     }
 
     @Override
-    public long getItemId() {
-        return 0;
+    public String getItemId() {
+        return id;
     }
 
     @Override

@@ -13,11 +13,6 @@ public class ProblemController {
     //private final ProblemService problemService;
 
 
-    @GetMapping("/join")
-    public String join() {
-        return "join";
-    }
-
     @GetMapping("/test")
     public String test() {
         return "test";

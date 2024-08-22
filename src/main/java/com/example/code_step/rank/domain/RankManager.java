@@ -1,4 +1,4 @@
-package com.example.code_step.rankmanager.domain;
+package com.example.code_step.rank.domain;
 
 public class RankManager {
     public boolean judgmentExp() {return true;}

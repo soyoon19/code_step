@@ -4,6 +4,7 @@ import com.example.code_step.member.domain.Member;
 import com.example.code_step.step.domain.Compensation;
 
 public class ExpBuff implements Item{
+    private String id;
     private float factor;
     private Compensation compensation;
 
@@ -13,8 +14,8 @@ public class ExpBuff implements Item{
     }
 
     @Override
-    public long getItemId() {
-        return 0;
+    public String getItemId() {
+        return id;
     }
 
     @Override

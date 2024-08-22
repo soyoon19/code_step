@@ -5,6 +5,6 @@ import com.example.code_step.step.domain.Compensation;
 
 public interface Item {
     void use(Member member);
-    long getItemId();
+    String getItemId();
     Compensation getCompensation();
 }

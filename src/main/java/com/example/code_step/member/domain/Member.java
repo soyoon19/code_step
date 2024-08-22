@@ -1,23 +1,27 @@
 package com.example.code_step.member.domain;
 
 import com.example.code_step.item.domain.Inventory;
+import com.example.code_step.rank.domain.Rank;
 import com.example.code_step.step.domain.Compensation;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
+@Builder
 public class Member {
-    private float buffFactor = 1f;
-    private int heart;
-
-    private int age;
-    private int study_count;
     private String username;
     private String uid;
     private String gender;
+    private int age;
+    private int studyCount;
+
+
+    private float buffFactor = 1f;
+    private int heart;
 
     private Inventory inventory;
     private Compensation compensation;
-
+    private Rank rank;
 
     public void decreaseHeart(){ heart--; }
     public void increaseHeart(int up){  heart += up; }
