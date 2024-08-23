@@ -10,7 +10,7 @@ public class Store {
 
         member.minusCompensation(item.getCompensation());
 
-        member.getInventory().addItem(item);
+        member.getInventory().plusItem(item);
         return true;
     }
 }

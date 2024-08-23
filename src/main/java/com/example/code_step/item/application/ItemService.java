@@ -15,9 +15,12 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
-public class ItemService {
+public class  ItemService {
     private final ItemRepository itemRepository;
-    private final MemberRepository memberRepository;
+
+    public Item findById(String id) {
+        return itemRepository.findById(id).toModel();
+    }
 
     public List<Item> findAll(){
         List<Item> items = new ArrayList<>();
@@ -28,13 +31,11 @@ public class ItemService {
         return items;
     }
 
-    public CommonResult useItem(String itemId, String uid){
+    public CommonResult useItem(String itemId, Member member){
         Item item = itemRepository.findById(itemId).toModel();
-        Member member = null; // Todo. MemberService 완성 후 다시 작성
         Inventory inventory = member.getInventory();
 
         inventory.useItem(item, member);
-
         return null;
     }
 }

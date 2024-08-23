@@ -1,6 +1,5 @@
 package com.example.code_step.item.infrastructure;
 
-import com.example.code_step.item.domain.Inventory;
 import com.example.code_step.item.domain.repository.InventoryRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -9,7 +8,6 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class InventoryRepositoryImpl implements InventoryRepository {
     private final InventoryJpaRepository inventoryJpaRepository;
-
 
     @Override
     public InventoryJpaEntity findById(Long id) {

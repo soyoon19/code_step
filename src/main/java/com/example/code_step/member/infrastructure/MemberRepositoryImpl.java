@@ -24,4 +24,9 @@ public class MemberRepositoryImpl implements MemberRepository {
     public void delete(MemberJpaEntity member) {
         memberJpaRepository.delete(member);
     }
+
+    @Override
+    public boolean exists(String uid) {
+        return memberJpaRepository.existsById(uid);
+    }
 }

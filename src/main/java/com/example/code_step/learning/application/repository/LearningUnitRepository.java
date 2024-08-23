@@ -8,4 +8,7 @@ import java.util.List;
 @Component
 public interface LearningUnitRepository{
     List<LearningUnitJpaEntity> findByLearningLanguageId(Long learningLanguageId);
+    LearningUnitJpaEntity findById(Long id);
+    boolean save(LearningUnitJpaEntity learningUnit);
+
 }

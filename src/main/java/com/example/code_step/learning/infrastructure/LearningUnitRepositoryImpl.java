@@ -10,9 +10,20 @@ import java.util.List;
 @AllArgsConstructor
 public class LearningUnitRepositoryImpl implements LearningUnitRepository {
     private final LearningUnitJpaRepository learningUnitJpaRepository;
+    private final LearningUnitRepository learningUnitRepository;
 
     @Override
     public List<LearningUnitJpaEntity> findByLearningLanguageId(Long learningLanguageId) {
         return learningUnitJpaRepository.findByLearningLanguageId(learningLanguageId);
+    }
+
+    @Override
+    public LearningUnitJpaEntity findById(Long id) {
+        return learningUnitJpaRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public boolean save(LearningUnitJpaEntity learningUnit) {
+        return learningUnitJpaRepository.save(learningUnit) != null;
     }
 }

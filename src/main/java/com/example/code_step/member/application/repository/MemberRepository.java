@@ -8,4 +8,5 @@ public interface MemberRepository {
     MemberJpaEntity findByUid(String uid);
     boolean save(MemberJpaEntity member);
     void delete(MemberJpaEntity member);
+    boolean exists(String uid);
 }

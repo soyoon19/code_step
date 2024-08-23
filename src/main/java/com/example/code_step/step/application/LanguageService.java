@@ -23,7 +23,13 @@ public class LanguageService {
         return languages;
     }
 
-    public void addLanguage(Language language) {
-        languageRepository.save(LanguageJpaEntity.from(language));
+    public Language findById(String id) {
+        return languageRepository.findById(id).toModel();
+    }
+
+
+
+    public boolean save(Language language) {
+        return languageRepository.save(LanguageJpaEntity.from(language));
     }
 }

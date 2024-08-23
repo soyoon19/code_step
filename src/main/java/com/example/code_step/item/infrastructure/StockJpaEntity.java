@@ -8,9 +8,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Getter
 @NoArgsConstructor
 public class StockJpaEntity {
     @Id
@@ -40,7 +42,7 @@ public class StockJpaEntity {
                 .build();
     }
 
-    public StockJpaEntity  from(Stock stock){
+    public static StockJpaEntity from(Stock stock){
         return StockJpaEntity.builder()
                 .id(stock.getId())
                 .inventoryId(stock.getInventory().getId())

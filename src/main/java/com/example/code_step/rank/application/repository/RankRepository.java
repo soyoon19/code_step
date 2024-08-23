@@ -1,4 +1,4 @@
-package com.example.code_step.rank.domain.repository;
+package com.example.code_step.rank.application.repository;
 
 import com.example.code_step.rank.infrastructure.RankJpaEntity;
 import org.springframework.stereotype.Component;

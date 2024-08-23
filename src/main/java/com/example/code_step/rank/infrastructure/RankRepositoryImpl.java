@@ -1,6 +1,6 @@
 package com.example.code_step.rank.infrastructure;
 
-import com.example.code_step.rank.domain.repository.RankRepository;
+import com.example.code_step.rank.application.repository.RankRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

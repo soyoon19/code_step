@@ -60,7 +60,7 @@ public class MemberJpaEntity {
                 .build();
     }
 
-    public MemberJpaEntity from(Member member){
+    public static MemberJpaEntity from(Member member){
         return MemberJpaEntity.builder()
                 .uid(member.getUid())
                 .username(member.getUsername())
