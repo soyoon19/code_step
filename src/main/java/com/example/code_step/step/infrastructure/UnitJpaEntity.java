@@ -17,14 +17,14 @@ public class UnitJpaEntity {
 
     private String languageId;
 
-    private int order;
+    private Integer orderNumber;
 
     private String title;
 
     @Builder
-    public UnitJpaEntity(String languageId, int order, String title) {
+    public UnitJpaEntity(String languageId, Integer orderNumber, String title) {
         this.languageId = languageId;
-        this.order = order;
+        this.orderNumber = orderNumber;
         this.title = title;
     }
 
@@ -33,7 +33,7 @@ public class UnitJpaEntity {
         UnitJpaEntity entity = UnitJpaEntity.builder()
                 .languageId(model.getLanguageId())
                 .title(model.getTitle())
-                .order(model.getOrder())
+                .orderNumber(model.getOrder())
                 .build();
 
         entity.id = model.getId();
@@ -44,7 +44,7 @@ public class UnitJpaEntity {
         return Unit.builder()
                 .id(id)
                 .languageId(languageId)
-                .order(order)
+                .order(orderNumber)
                 .title(title)
                 .build();
     }

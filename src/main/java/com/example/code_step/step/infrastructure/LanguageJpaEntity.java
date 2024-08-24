@@ -1,6 +1,7 @@
 package com.example.code_step.step.infrastructure;
 
 import com.example.code_step.step.domain.Language;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Builder;
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LanguageJpaEntity {
     @Id
+    @Column(length = 150)
     private String id;
 
     private String name;

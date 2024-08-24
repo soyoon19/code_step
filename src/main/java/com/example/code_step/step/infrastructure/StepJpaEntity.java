@@ -16,15 +16,15 @@ public class StepJpaEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private int order;
+    private Integer orderNumber; //order은 예약어
 
     private Long unitId;
 
     private Long compensationId;
 
     @Builder
-    public StepJpaEntity(int order, Long unitId, Long compensationId) {
-        this.order = order;
+    public StepJpaEntity(Integer orderNumber, Long unitId, Long compensationId) {
+        this.orderNumber = orderNumber;
         this.unitId = unitId;
         this.compensationId = compensationId;
     }
@@ -32,7 +32,7 @@ public class StepJpaEntity {
     public Step toModel(Compensation compensation) {
         return Step.builder()
                 .unitId(unitId)
-                .order(order)
+                .order(orderNumber)
                 .id(id)
                 .compensation(compensation)
                 .build();
@@ -42,7 +42,7 @@ public class StepJpaEntity {
         StepJpaEntity entity = StepJpaEntity.builder()
                 .unitId(step.getUnitId())
                 .compensationId(step.getCompensation().id())
-                .order(step.getOrder())
+                .orderNumber(step.getOrder())
                 .build();
 
         if(step.getId() != 0) entity.id = step.getId();

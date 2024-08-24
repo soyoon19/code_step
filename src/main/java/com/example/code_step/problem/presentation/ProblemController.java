@@ -18,4 +18,9 @@ public class ProblemController {
         return "test";
     }
 
+
+    @GetMapping("/lock")
+    public String lock() {
+        return "lock";
+    }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 
 @Component
 public interface StepRepository {
-    StepJpaEntity findByUnitIdAndOrder(Long unitId, Integer order);
+    StepJpaEntity findByUnitIdAndOrderNumber(Long unitId, Integer order);
     boolean save(StepJpaEntity stepJpaEntity);
     StepJpaEntity findById(Long id);
     List<StepJpaEntity> findByUnitId(Long unitId);

@@ -14,8 +14,8 @@ public class StepRepositoryImpl implements StepRepository {
     private final StepJapRepository stepJapRepository;
 
     @Override
-    public StepJpaEntity findByUnitIdAndOrder(Long unitId, Integer order) {
-        return stepJapRepository.findByUnitIdAndOrder(unitId, order);
+    public StepJpaEntity findByUnitIdAndOrderNumber(Long unitId, Integer order) {
+        return stepJapRepository.findByUnitIdAndOrderNumber(unitId, order);
     }
 
     @Override

@@ -15,5 +15,5 @@ public class StepAndProblemJpaEntity {
 
     private Long stepId;
 
-    private int order;
+    private Integer orderNumber;
 }

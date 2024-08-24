@@ -4,6 +4,7 @@ import com.example.code_step.item.domain.Inventory;
 import com.example.code_step.member.domain.Member;
 import com.example.code_step.rank.domain.Rank;
 import com.example.code_step.step.domain.Compensation;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Builder;
@@ -15,6 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class MemberJpaEntity {
     @Id
+    @Column(length = 150)
     private String uid;
 
     private String username;

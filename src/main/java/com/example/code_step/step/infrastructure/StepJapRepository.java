@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface StepJapRepository extends JpaRepository<StepJpaEntity, Long> {
-    StepJpaEntity findByUnitIdAndOrder(Long unitId, Integer order);
+    StepJpaEntity findByUnitIdAndOrderNumber(Long unitId, Integer orderNumber);
     List<StepJpaEntity> findByUnitId(Long unitId);
 }

@@ -24,7 +24,7 @@ public class SecurityConfig {
                 .formLogin(auth -> auth.disable()); //form 로그인 방식 비활성화
         http
             .authorizeRequests(auth -> auth
-                    .anyRequest().authenticated()); //filter 에서 거른다.
+                    .anyRequest().permitAll()); //filter 에서 거른다.
         http
                 .addFilterBefore(new FirebaseTokenFilter(excludePatterns), UsernamePasswordAuthenticationFilter.class);
 
