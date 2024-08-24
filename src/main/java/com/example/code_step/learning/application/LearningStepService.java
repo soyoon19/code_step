@@ -2,6 +2,7 @@ package com.example.code_step.learning.application;
 
 import com.example.code_step.learning.domain.LearningStep;
 import com.example.code_step.learning.application.repository.LearningStepRepository;
+import com.example.code_step.learning.domain.LearningUnit;
 import com.example.code_step.learning.infrastructure.LearningStepJpaEntity;
 import com.example.code_step.step.application.StepService;
 import com.example.code_step.step.domain.Step;
@@ -43,6 +44,24 @@ public class LearningStepService {
         learningStepRepository.save(LearningStepJpaEntity.from(step));
     }
 
+    public void initLearningStep(LearningUnit learningUnit){
+        List<Step> steps = stepService.findByUnitId(learningUnit.getId());
+        LearningStep learningStep;
+
+
+        for(Step step : steps){
+            learningStep = LearningStep.builder()
+                    .learningUnitId(learningUnit.getId())
+                    .stepId(step.getId())
+                    .state(
+                            step.getOrder() != 1 ? //첫 번째 state 경우 Learning 으로 설정
+                            LearningStep.NO_CLEAR : LearningStep.LEARNING)
+                    .build();
+
+            save(learningStep);
+        }
+    }
+
     //현재 사용자 Unit에 맞는 Step 정보를 가져온다.
     public List<LearningStep> findByLearningUnitId(Long learningUnitId) {
         List<LearningStepJpaEntity> entities = learningStepRepository.findByLearningUnitId(learningUnitId);
@@ -51,5 +70,9 @@ public class LearningStepService {
             learningSteps.add(entity.toModel());
 
         return learningSteps;
+    }
+
+    public boolean save(LearningStep learningStep){
+        return learningStepRepository.save(LearningStepJpaEntity.from(learningStep));
     }
 }

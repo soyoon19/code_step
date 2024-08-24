@@ -69,4 +69,14 @@ public class MemberService {
         return memberRepository.save(MemberJpaEntity.from(member));
     }
 
+    public Member findByUid(String uid){
+        MemberJpaEntity memberJpaEntity = memberRepository.findByUid(uid);
+
+        Inventory inventory = inventoryService.findById(memberJpaEntity.getInventoryId());
+        Rank rank = rankService.findById(memberJpaEntity.getRankId());
+        Compensation compensation = compensationService.findById(memberJpaEntity.getCompensationId());
+
+        return memberRepository.findByUid(uid).toModel(inventory, compensation, rank);
+    }
+
 }

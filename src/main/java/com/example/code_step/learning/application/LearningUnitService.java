@@ -23,8 +23,10 @@ public class LearningUnitService {
     }
 
     //Language 맞는 Unit를 바탕으로 LearningUnit를 생성한다.
-    public void initLearningUnit(LearningLanguage learningLanguage) {
+    //초기화 및 객체 반환
+    public List<LearningUnit> initLearningUnit(LearningLanguage learningLanguage) {
         List<Unit> units = unitService.findByLanguageId(learningLanguage.getLanguageId());
+        List<LearningUnit> learningUnits = new ArrayList<>();
 
         LearningUnit learningUnit;
         for (Unit unit : units) {
@@ -33,7 +35,10 @@ public class LearningUnitService {
                             .unitId(unit.getId())
                             .progress(0f).build();
             save(learningUnit);
+            learningUnits.add(learningUnit);
         }
+
+        return learningUnits;
     }
 
     public boolean save(LearningUnit learningUnit) {
@@ -44,4 +49,5 @@ public class LearningUnitService {
         List<LearningUnitJpaEntity> learningUnits = learningUnitRepository.findByLearningLanguageId(learningLanguageId);
         return learningUnits.stream().map(LearningUnitJpaEntity::toModel).toList(); //신기하군
     }
+
 }
