@@ -45,7 +45,6 @@
         a {
             position: relative;
             font-size: 20px;
-            left: 840px;
         }
         .login {
             width: 274px;
@@ -80,14 +79,39 @@
             background: #282837;
             color: white;
         }
+        .fck {
+
+            left: 840px;
+        }
+        #input1 {
+            width: 500px;
+            height: 70px;
+            position: relative;
+            top: 50%;
+            left: 35%;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+        a:visited {
+            color: white;
+        }
+        a:link {
+            color: white;
+        }
     </style>
 </head>
 <body>
     <p><br><i>Admin Mode</i><h4>Don't have account?</h4></p>
     <h1>LOGIN</h1><br>
-    <strong>Email address</strong><div></div><br>
-    <strong>Passowrd</strong><a href="#" style="color: #00a3ff;">Forgot Password?</a><div></div><br>
-    <div class="login"><b>Login</b></div>
+    <strong>Email address</strong>
+    <form action="form_ok.php" method="post">
+        <input id="input1" type="email"></form>
+        <br>
+    <strong>Passowrd</strong><a href="#" style="color: #00a3ff;" class="fck">Forgot Password?</a>
+    <form action="form_ok.php" method="post">
+        <input id="input1" type="password"></form>
+        <br>
+    <a href="#"><div class="login"><b>Login</b></div></a>
     <a herf="#"><img src="media2/Red Flag.png" width="70px" height="70px" class="warning">
     <a href="#"><i class="help">Do you need help?</i></a>
 
