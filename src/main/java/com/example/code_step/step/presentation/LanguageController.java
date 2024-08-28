@@ -13,7 +13,7 @@ import java.util.List;
 public class LanguageController {
     private final LanguageService languageService;
 
-    @GetMapping("/languages/")
+    @GetMapping("/languages")
     public List<Language> getLanguages() {
         return languageService.findAll();
     }

@@ -2,8 +2,10 @@ package com.example.code_step.core;
 
 
 import lombok.Builder;
+import lombok.Getter;
 
 @Builder
+@Getter
 public class CommonResult {
     public static final int ERROR = 1;
 

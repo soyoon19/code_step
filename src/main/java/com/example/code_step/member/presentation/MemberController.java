@@ -17,15 +17,11 @@ public class MemberController {
     @PostMapping("/join")
     public CommonResult join(@RequestBody  MemberJoinRequestDto memberInfo) {
 
-        memberService.join(memberInfo);
         System.out.println("memberInfo : " + memberInfo.toString());
         System.out.println("join!");
 
-        return CommonResult.builder()
-                .code(200)
-                .message("join success")
-                .success(true)
-                .build();
+        return memberService.join(memberInfo);
+
     }
 
 }
