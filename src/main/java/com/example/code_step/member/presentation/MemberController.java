@@ -5,6 +5,8 @@ import com.example.code_step.member.application.MemberService;
 import com.example.code_step.member.presentation.dto.MemberJoinRequestDto;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -12,9 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
     private MemberService memberService;
 
-    @GetMapping("/join")
-    public CommonResult join(MemberJoinRequestDto memberInfo) {
+    @PostMapping("/join")
+    public CommonResult join(@RequestBody  MemberJoinRequestDto memberInfo) {
+
         memberService.join(memberInfo);
+        System.out.println("memberInfo : " + memberInfo.toString());
+        System.out.println("join!");
 
         return CommonResult.builder()
                 .code(200)
@@ -22,4 +27,5 @@ public class MemberController {
                 .success(true)
                 .build();
     }
+
 }
