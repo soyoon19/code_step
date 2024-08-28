@@ -1,0 +1,482 @@
+[
+  {
+    "problemId": 1,
+    "description": "int",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 1,
+    "description": "float",
+    "answer": false,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 1,
+    "description": "string",
+    "answer": false,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 1,
+    "description": "boolean",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 2,
+    "description": "for문은 고정된 반복 횟수를 사용할 때 주로 사용된다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 2,
+    "description": "while문은 조건이 참일 때까지 반복한다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 2,
+    "description": "for문은 무한 반복이 기본이다.",
+    "answer": false,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 2,
+    "description": "while문은 한 번만 실행된다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 3,
+    "description": "if-else 문은 조건에 따라 다른 코드를 실행한다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 3,
+    "description": "if-else 문은 항상 두 개 이상의 조건이 있어야 한다.",
+    "answer": false,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 3,
+    "description": "if 문은 조건이 없어도 된다.",
+    "answer": false,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 3,
+    "description": "else 문은 선택적이다.",
+    "answer": true,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 4,
+    "description": "리스트에서 최대값을 찾으려면 max() 함수를 사용할 수 있다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 4,
+    "description": "리스트에서 최소값을 찾으려면 min() 함수를 사용한다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 4,
+    "description": "리스트는 정렬이 필요 없다.",
+    "answer": false,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 4,
+    "description": "리스트는 항상 숫자만 포함해야 한다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 5,
+    "description": "함수는 여러 번 재사용할 수 있는 코드 블록이다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 5,
+    "description": "함수는 반드시 인수를 가져야 한다.",
+    "answer": false,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 5,
+    "description": "함수는 return 문이 없어도 된다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 5,
+    "description": "함수는 항상 출력값이 있어야 한다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 6,
+    "description": "클래스는 객체의 설계도이다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 6,
+    "description": "객체는 클래스의 인스턴스이다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 6,
+    "description": "클래스는 함수와 같지 않다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 6,
+    "description": "객체는 클래스 없이 존재할 수 있다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 7,
+    "description": "모듈을 사용하면 코드의 재사용성이 높아진다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 7,
+    "description": "모듈은 파이썬 코드 파일이다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 7,
+    "description": "모듈은 외부에서 불러와 사용된다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 7,
+    "description": "모듈은 반드시 파이썬 표준 라이브러리 내에 있어야 한다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 8,
+    "description": "try-except 구문은 예외 발생 시 프로그램을 종료한다.",
+    "answer": false,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 8,
+    "description": "try-except 구문은 예외 발생 시 코드의 실행을 계속할 수 있게 한다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 8,
+    "description": "except 블록은 필수적으로 포함되어야 한다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 8,
+    "description": "try 블록은 반드시 오류를 포함해야 한다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 9,
+    "description": "파이썬의 기본 데이터 타입에는 int, float, str 등이 있다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 9,
+    "description": "파이썬에는 기본적으로 char 타입이 있다.",
+    "answer": false,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 9,
+    "description": "파이썬의 데이터 타입은 동적이다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 9,
+    "description": "파이썬의 모든 변수는 선언 시 타입을 명시해야 한다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 10,
+    "description": "파일을 읽을 때는 open() 함수를 사용한다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 10,
+    "description": "파일을 쓸 때는 write() 메서드를 사용한다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 10,
+    "description": "파일은 반드시 닫아야 한다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 10,
+    "description": "파일 읽기 모드는 'w'이다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 11,
+    "description": "리스트 컴프리헨션은 리스트를 선언하는 간단한 방법이다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 11,
+    "description": "리스트 컴프리헨션은 반복문보다 더 복잡하다.",
+    "answer": false,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 11,
+    "description": "리스트 컴프리헨션은 성능이 좋다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 11,
+    "description": "리스트 컴프리헨션은 중첩 리스트를 생성할 수 없다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 12,
+    "description": "데코레이터는 함수를 감싸는 또 다른 함수이다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 12,
+    "description": "데코레이터는 함수의 동작을 변경할 수 없다.",
+    "answer": false,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 12,
+    "description": "데코레이터는 다른 데코레이터를 포함할 수 있다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 12,
+    "description": "데코레이터는 파이썬 고유의 기능이다.",
+    "answer": true,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 13,
+    "description": "람다 함수는 익명 함수로, 간단한 작업에 사용된다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 13,
+    "description": "람다 함수는 여러 줄의 코드로 구성될 수 있다.",
+    "answer": false,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 13,
+    "description": "람다 함수는 함수의 인자로 전달될 수 있다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 13,
+    "description": "람다 함수는 반드시 return 문이 필요하다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 14,
+    "description": "이터레이터는 데이터를 순차적으로 접근하는 객체이다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 14,
+    "description": "제너레이터는 이터레이터의 한 형태로, 값을 하나씩 생성한다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 14,
+    "description": "이터레이터는 한 번 사용한 후 다시 사용할 수 있다.",
+    "answer": false,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 14,
+    "description": "제너레이터는 항상 무한 반복을 생성한다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 15,
+    "description": "가비지 컬렉션은 메모리 누수를 방지한다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 15,
+    "description": "가비지 컬렉션은 사용되지 않는 객체를 자동으로 제거한다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 15,
+    "description": "가비지 컬렉션은 수동으로 실행해야 한다.",
+    "answer": false,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 15,
+    "description": "가비지 컬렉션은 모든 프로그래밍 언어에 내장되어 있다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 16,
+    "description": "유니코드는 모든 문자에 고유한 번호를 부여하는 표준이다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 16,
+    "description": "UTF-8은 유니코드의 인코딩 방식 중 하나이다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 16,
+    "description": "유니코드는 8비트를 사용하여 문자를 인코딩한다.",
+    "answer": false,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 16,
+    "description": "UTF-8은 고정 길이의 인코딩 방식이다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 17,
+    "description": "얕은 복사는 객체의 참조만 복사한다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 17,
+    "description": "깊은 복사는 객체의 모든 내용을 복사한다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 17,
+    "description": "얕은 복사는 객체의 내용을 복사한다.",
+    "answer": false,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 17,
+    "description": "깊은 복사는 객체의 참조만 복사한다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 18,
+    "description": "append() 메서드는 리스트 끝에 요소를 추가한다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 18,
+    "description": "extend() 메서드는 리스트를 확장한다.",
+    "answer": true,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 18,
+    "description": "append() 메서드는 리스트의 처음에 요소를 추가한다.",
+    "answer": false,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 18,
+    "description": "extend() 메서드는 리스트의 요소를 삭제한다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 19,
+    "description": "정규 표현식은 문자열에서 패턴을 찾기 위해 사용된다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 19,
+    "description": "정규 표현식은 오직 숫자만 찾을 수 있다.",
+    "answer": false,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 19,
+    "description": "정규 표현식은 대소문자를 구분할 수 있다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 19,
+    "description": "정규 표현식은 정해진 패턴만 사용할 수 있다.",
+    "answer": false,
+    "orderNumber": 4
+  },
+  {
+    "problemId": 20,
+    "description": "문자열에서 특정 문자의 위치를 찾기 위해 find() 메서드를 사용한다.",
+    "answer": true,
+    "orderNumber": 1
+  },
+  {
+    "problemId": 20,
+    "description": "문자열에서 특정 문자의 위치를 찾기 위해 replace() 메서드를 사용한다.",
+    "answer": false,
+    "orderNumber": 2
+  },
+  {
+    "problemId": 20,
+    "description": "find() 메서드는 첫 번째로 일치하는 문자의 위치를 반환한다.",
+    "answer": true,
+    "orderNumber": 3
+  },
+  {
+    "problemId": 20,
+    "description": "replace() 메서드는 특정 문자의 위치를 반환한다.",
+    "answer": false,
+    "orderNumber": 4
+  }
+]

@@ -24,6 +24,6 @@ public class UnitService {
     }
 
     public boolean addUnit(Unit unit) {
-        return unitRepository.save(UnitJpaEntity.form(unit));
+        return unitRepository.save(UnitJpaEntity.from(unit));
     }
 }

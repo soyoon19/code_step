@@ -1,9 +1,13 @@
 package com.example.code_step.rank.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Rank {
     public static final int START_RANK_ID = 1;

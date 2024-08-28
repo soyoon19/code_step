@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Bronze",
+    "nextRankId": 2,
+    "nextExp": 100,
+    "nowExp": 0,
+    "imgPath": ""
+  },
+  {
+    "id": 2,
+    "name": "Silver",
+    "nextRankId": 3,
+    "nextExp": 1000,
+    "nowExp": 100,
+    "imgPath": ""
+  },
+  {
+    "id": 3,
+    "name": "Gold",
+    "nextRankId": 0,
+    "nextExp": 999999,
+    "nowExp": 1000,
+    "imgPath": ""
+  }
+]

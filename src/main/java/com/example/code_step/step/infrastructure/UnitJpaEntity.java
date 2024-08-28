@@ -29,7 +29,7 @@ public class UnitJpaEntity {
     }
 
 
-    public static UnitJpaEntity form(Unit model){
+    public static UnitJpaEntity from(Unit model){
         UnitJpaEntity entity = UnitJpaEntity.builder()
                 .languageId(model.getLanguageId())
                 .title(model.getTitle())

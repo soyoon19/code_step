@@ -1,11 +1,9 @@
 package com.example.code_step.item.infrastructure;
 
 import com.example.code_step.item.domain.Inventory;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 
@@ -15,6 +13,8 @@ import lombok.NoArgsConstructor;
 //꼭 도메인 객체는 영속성 객체로 존재할 필요가 있나
 @Entity
 @NoArgsConstructor
+@Getter
+@Table(name = "inventory")
 public class InventoryJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
