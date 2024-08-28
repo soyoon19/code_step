@@ -1,20 +1,49 @@
 package com.example.code_step.problem.infrastructure;
 
 import com.example.code_step.problem.domain.Problem;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import com.example.code_step.problem.domain.ProblemBasicInfo;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Getter
-@Setter
+@Table(name = "problem")
+@NoArgsConstructor
 public class ProblemJpaEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public Problem toModel(){
-        return null;
+    private String title;
+
+    private String description;
+
+    private Integer type;
+
+    @Builder
+    public ProblemJpaEntity(Long id, String title, String description, Integer type) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.type = type;
+    }
+
+    public ProblemBasicInfo toModel(){
+        return ProblemBasicInfo.builder()
+                .id(id)
+                .title(title)
+                .description(description)
+                .type(type)
+                .build();
+    }
+
+    public static ProblemJpaEntity from(ProblemBasicInfo problem){
+        return ProblemJpaEntity.builder()
+                .title(problem.title())
+                .description(problem.description())
+                .id(problem.id())
+                .type(problem.type())
+                .build();
     }
 
 }

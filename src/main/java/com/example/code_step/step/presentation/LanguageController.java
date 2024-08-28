@@ -13,8 +13,15 @@ import java.util.List;
 public class LanguageController {
     private final LanguageService languageService;
 
-    @GetMapping("/language/")
+    @GetMapping("/languages/")
     public List<Language> getLanguages() {
         return languageService.findAll();
     }
+
+    @GetMapping("/language/add")
+    public Boolean addLanguage(String languageName, String languageId) {
+        return null; //Todo. 문제 추가 기능 구현 후 구현
+    }
+
+
 }

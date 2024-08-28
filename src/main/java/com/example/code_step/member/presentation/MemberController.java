@@ -14,7 +14,7 @@ public class MemberController {
 
     @GetMapping("/join")
     public CommonResult join(MemberJoinRequestDto memberInfo) {
-
+        memberService.join(memberInfo);
 
         return CommonResult.builder()
                 .code(200)
