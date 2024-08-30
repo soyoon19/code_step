@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface LearningLanguageJpaRepository extends JpaRepository<LearningLanguageJpaEntity, Long> {
     List<LearningLanguageJpaEntity> getByUid(String uid);
+    List<LearningLanguageJpaEntity> findByUidAndLanguageId(String uid, String languageId);
 }

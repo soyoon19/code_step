@@ -15,8 +15,8 @@ public class InventoryRepositoryImpl implements InventoryRepository {
     }
 
     @Override
-    public boolean save(InventoryJpaEntity inventory) {
-        return inventoryJpaRepository.save(inventory) != null;
+    public InventoryJpaEntity save(InventoryJpaEntity inventory) {
+        return inventoryJpaRepository.save(inventory);
     }
 
     @Override

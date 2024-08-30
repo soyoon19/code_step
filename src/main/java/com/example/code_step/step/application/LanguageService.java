@@ -20,6 +20,8 @@ public class LanguageService {
         for (LanguageJpaEntity entity : entities)
             languages.add(entity.toModel());
 
+        System.out.println("languages : size " + languages.size());
+
         return languages;
     }
 

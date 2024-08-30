@@ -1,15 +1,13 @@
 package com.example.code_step.step.infrastructure;
 
 import com.example.code_step.step.domain.Unit;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
+@Table(name = "unit")
 public class UnitJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

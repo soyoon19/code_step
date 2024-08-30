@@ -22,7 +22,12 @@ public class LearningUnitRepositoryImpl implements LearningUnitRepository {
     }
 
     @Override
-    public boolean save(LearningUnitJpaEntity learningUnit) {
-        return learningUnitJpaRepository.save(learningUnit) != null;
+    public LearningUnitJpaEntity save(LearningUnitJpaEntity learningUnit) {
+        return learningUnitJpaRepository.save(learningUnit);
+    }
+
+    @Override
+    public List<LearningUnitJpaEntity> saveAll(List<LearningUnitJpaEntity> learningUnits) {
+        return learningUnitJpaRepository.saveAll(learningUnits);
     }
 }

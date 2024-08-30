@@ -14,7 +14,7 @@ import java.util.List;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-    private List<String> excludePatterns = List.of("/join", "/test", "/", "language");
+    private List<String> excludePatterns = List.of("/join", "/test", "/", "/language");
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {

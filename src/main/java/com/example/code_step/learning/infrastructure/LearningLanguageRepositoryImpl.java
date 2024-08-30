@@ -19,13 +19,18 @@ public class LearningLanguageRepositoryImpl implements LearningLanguageRepositor
     }
 
     @Override
-    public boolean save(LearningLanguageJpaEntity learningLanguage) {
-        return learningLanguageJpaRepository.save(learningLanguage) != null;
+    public LearningLanguageJpaEntity save(LearningLanguageJpaEntity learningLanguage) {
+        return learningLanguageJpaRepository.save(learningLanguage);
     }
 
     @Override
     public LearningLanguageJpaEntity findById(Long id) {
         return learningLanguageJpaRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public List<LearningLanguageJpaEntity> findByUidAndLanguageId(String uid, String languageId) {
+        return learningLanguageJpaRepository.findByUidAndLanguageId(uid, languageId);
     }
 
 

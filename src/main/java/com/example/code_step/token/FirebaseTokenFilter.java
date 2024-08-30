@@ -46,7 +46,9 @@ public class FirebaseTokenFilter extends OncePerRequestFilter {
 
                 //아마 토큰이 유효하지 않으면 자동으로 Exception를 발생시킬것 같긴한데 한 번 확인 필요.
                 if(decodeToken != null) {
+                    System.out.println("token decode value : " + decodeToken.getUid());
                     request.setAttribute("uid", decodeToken.getUid());
+
                     filterChain.doFilter(request, response);
                     return;
                 }

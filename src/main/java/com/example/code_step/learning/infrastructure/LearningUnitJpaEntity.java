@@ -1,15 +1,13 @@
 package com.example.code_step.learning.infrastructure;
 
 import com.example.code_step.learning.domain.LearningUnit;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
+@Table(name = "learning_unit")
 public class LearningUnitJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

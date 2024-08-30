@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 public interface InventoryRepository {
     InventoryJpaEntity findById(Long id);
-    boolean save(InventoryJpaEntity inventory);
+    InventoryJpaEntity save(InventoryJpaEntity inventory);
     void deleteById(Long id);
 }

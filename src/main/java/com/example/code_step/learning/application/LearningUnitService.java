@@ -34,15 +34,15 @@ public class LearningUnitService {
                             .learningLanguageId(learningLanguage.getId())
                             .unitId(unit.getId())
                             .progress(0f).build();
-            save(learningUnit);
-            learningUnits.add(learningUnit);
+
+            learningUnits.add(save(learningUnit));
         }
 
         return learningUnits;
     }
 
-    public boolean save(LearningUnit learningUnit) {
-        return learningUnitRepository.save(LearningUnitJpaEntity.from(learningUnit));
+    public LearningUnit save(LearningUnit learningUnit) {
+        return learningUnitRepository.save(LearningUnitJpaEntity.from(learningUnit)).toModel();
     }
 
     public List<LearningUnit> findByLearningLanguageId(Long learningLanguageId) {

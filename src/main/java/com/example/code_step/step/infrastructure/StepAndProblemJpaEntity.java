@@ -1,11 +1,12 @@
 package com.example.code_step.step.infrastructure;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 @Entity
+@NoArgsConstructor
+@Table(name = "step_and_problem")
 public class StepAndProblemJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,4 +17,11 @@ public class StepAndProblemJpaEntity {
     private Long stepId;
 
     private Integer orderNumber;
+
+    @Builder
+    public StepAndProblemJpaEntity(Long id, Long problemId, Long stepId, Integer orderNumber) {
+        this.problemId = problemId;
+        this.stepId = stepId;
+        this.orderNumber = orderNumber;
+    }
 }

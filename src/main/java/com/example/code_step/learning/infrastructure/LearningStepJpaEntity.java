@@ -1,10 +1,7 @@
 package com.example.code_step.learning.infrastructure;
 
 import com.example.code_step.learning.domain.LearningStep;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,6 +10,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "learning_step")
 public class LearningStepJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

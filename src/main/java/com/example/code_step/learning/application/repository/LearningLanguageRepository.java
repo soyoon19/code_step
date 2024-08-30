@@ -9,6 +9,7 @@ import java.util.List;
 @Component
 public interface LearningLanguageRepository {
     List<LearningLanguageJpaEntity> findByUid(String uid);
-    boolean save(LearningLanguageJpaEntity learningLanguage);
+    LearningLanguageJpaEntity save(LearningLanguageJpaEntity learningLanguage);
     LearningLanguageJpaEntity findById(Long id);
+    List<LearningLanguageJpaEntity> findByUidAndLanguageId(String uid, String languageId);
 }

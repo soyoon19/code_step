@@ -7,7 +7,7 @@ import java.util.List;
 
 @Component
 public interface CompensationRepository {
-    boolean save(CompensationJpaEntity compensation);
+    CompensationJpaEntity save(CompensationJpaEntity compensation);
     CompensationJpaEntity findById(long id);
     List<CompensationJpaEntity> findAll();
     void deleteById(long id);

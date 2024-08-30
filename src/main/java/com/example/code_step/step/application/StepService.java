@@ -14,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class StepService {
     private final StepRepository stepRepository;
+    private final CompensationService compensationService;
 
     //Todo : Compensation 파트가 안성되고 나머지 작업 수행
 
@@ -21,7 +22,7 @@ public class StepService {
         List<StepJpaEntity> entities = stepRepository.findByUnitId(unitId);
         List<Step> steps = new ArrayList<>();
         for (StepJpaEntity entity : entities) {
-            //steps.add(entity.toModel());
+            steps.add(entity.toModel(compensationService.findById(entity.getCompensationId())));
         }
 
         return steps;

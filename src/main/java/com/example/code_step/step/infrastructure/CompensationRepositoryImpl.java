@@ -13,8 +13,8 @@ public class CompensationRepositoryImpl implements CompensationRepository {
 
 
     @Override
-    public boolean save(CompensationJpaEntity compensation) {
-        return compensationJpaRepository.save(compensation) != null;
+    public CompensationJpaEntity save(CompensationJpaEntity compensation) {
+        return compensationJpaRepository.save(compensation);
     }
 
     @Override

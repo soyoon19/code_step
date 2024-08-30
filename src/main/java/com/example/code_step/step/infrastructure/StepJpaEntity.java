@@ -2,15 +2,15 @@ package com.example.code_step.step.infrastructure;
 
 import com.example.code_step.step.domain.Compensation;
 import com.example.code_step.step.domain.Step;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
+@Getter
+@Table(name = "step")
 public class StepJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

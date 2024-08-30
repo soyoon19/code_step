@@ -3,15 +3,13 @@ package com.example.code_step.learning.infrastructure;
 import com.example.code_step.learning.domain.LearningLanguage;
 import com.example.code_step.step.domain.Language;
 import com.example.code_step.step.infrastructure.LanguageJpaEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
+@Table(name = "learning_language")
 public class LearningLanguageJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

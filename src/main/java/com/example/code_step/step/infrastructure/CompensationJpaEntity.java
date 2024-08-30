@@ -1,15 +1,14 @@
 package com.example.code_step.step.infrastructure;
 
 import com.example.code_step.step.domain.Compensation;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
+@Table(name = "compensation")
+
 public class CompensationJpaEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

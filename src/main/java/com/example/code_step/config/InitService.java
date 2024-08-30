@@ -12,11 +12,10 @@ import com.example.code_step.rank.domain.Rank;
 import com.example.code_step.rank.infrastructure.RankJpaEntity;
 import com.example.code_step.rank.infrastructure.RankJpaRepository;
 import com.example.code_step.step.domain.Language;
+import com.example.code_step.step.domain.Step;
+import com.example.code_step.step.domain.StepAndProblem;
 import com.example.code_step.step.domain.Unit;
-import com.example.code_step.step.infrastructure.LanguageJpaEntity;
-import com.example.code_step.step.infrastructure.LanguageJpaRepository;
-import com.example.code_step.step.infrastructure.UnitJpaEntity;
-import com.example.code_step.step.infrastructure.UnitJpaRepository;
+import com.example.code_step.step.infrastructure.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -28,6 +27,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 @Component
 @RequiredArgsConstructor
@@ -39,6 +40,8 @@ public class InitService implements CommandLineRunner {
     private final UnitJpaRepository unitJpaRepository;
     private final ProblemJpaRepository problemJpaRepository;
     private final ChoiceJpaRepository choiceJpaRepository;
+    private final StepJapRepository stepJapRepository;
+    private final StepAndProblemJpaRepository stepAndProblemJpaRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -51,33 +54,33 @@ public class InitService implements CommandLineRunner {
         );
 
         if(rankJpaRepository.count() == 0){
-            for (Rank rank : ranks)
-                rankJpaRepository.save(RankJpaEntity.from(rank));
+            rankJpaRepository.saveAll(ranks.stream().map(RankJpaEntity::from).toList());
         }
     }
 
     private void initLanguage(ObjectMapper objectMapper) throws IOException {
         ArrayList<Language> languages = objectMapper.readValue(resourceJsonToString("json/language.json"),
-                new TypeReference<ArrayList<Language>>() {}
+                new TypeReference<ArrayList<Language>>() {
+                }
         );
 
 
         ArrayList<Unit> units = objectMapper.readValue(resourceJsonToString("json/unit.json"),
-                new TypeReference<ArrayList<Unit>>() {}
+                new TypeReference<ArrayList<Unit>>() {
+                }
         );
 
 
-        if(languageJpaRepository.count() == 0){
-            for (Language language : languages)
-                languageJpaRepository.save(LanguageJpaEntity.from(language));
+        if (languageJpaRepository.count() == 0) {
+            languageJpaRepository.saveAll(languages.stream().map(LanguageJpaEntity::from).toList());
         }
 
-        if(unitJpaRepository.count() == 0)
-            for(Unit unit : units)
-                unitJpaRepository.save(UnitJpaEntity.from(unit));
+        if (unitJpaRepository.count() == 0)
+            unitJpaRepository.saveAll(units.stream().map(UnitJpaEntity::from).toList());
     }
 
     private void initProblem(ObjectMapper objectMapper) throws IOException {
+
         ArrayList<ProblemBasicInfo> problems = objectMapper.readValue(resourceJsonToString("json/problem.json"),
                 new TypeReference<ArrayList<ProblemBasicInfo>>() {}
         );
@@ -87,14 +90,70 @@ public class InitService implements CommandLineRunner {
         );
 
 
-        if(problemJpaRepository.count() == 0){
-            for (ProblemBasicInfo problem : problems)
-                problemJpaRepository.save(ProblemJpaEntity.from(problem));
-        }
+        if(problemJpaRepository.count() == 0)
+                problemJpaRepository.saveAll(problems.stream().map(ProblemJpaEntity::from).toList());
+
 
         if(choiceJpaRepository.count() == 0)
-            for(ChoiceJpaEntity choice : choices)
-                choiceJpaRepository.save((choice));
+            choiceJpaRepository.saveAll(choices);
+
+        //Step를 Random 하게 생성
+        if(stepJapRepository.count() == 0){
+            List<Unit> units = unitJpaRepository.findAll().stream().map(UnitJpaEntity::toModel).toList();
+            for(Unit unit : units){
+
+                List<StepAndProblemJpaEntity> stepAndProblemJpaEntities = new ArrayList<>();
+                int r = (int) (Math.random() * 3 + 5);
+                for(int i = 0; i < r; i++){
+                    //step 생성
+                    StepJpaEntity stepJpaEntity = StepJpaEntity.builder()
+                                    .unitId(unit.getId())
+                                    .compensationId(10L)
+                                    .orderNumber(i + 1)
+                            .build();
+
+                    //저장한 뒤에 지정된 id를 가져와야 한다.
+                    stepJpaEntity = stepJapRepository.save(stepJpaEntity);
+
+                    //랜덤하게 problem 가져오기
+                    List<ProblemJpaEntity> problemJpaEntities = getRandomProblems((int) (Math.random() * 3 + 3));
+
+
+                    //생성한 step과 랜덤으로 가져온 problem 연결하기
+                    int j = 1;
+                    for (ProblemJpaEntity problem : problemJpaEntities) {
+                        stepAndProblemJpaEntities.add(
+                                connectStepAndProblem(problem, stepJpaEntity, j++)
+                        );
+                    }
+
+                }
+
+                //step 및 problem 연결한 정보 저장
+                stepAndProblemJpaRepository.saveAll(stepAndProblemJpaEntities);
+            }
+        }
+    }
+
+    public StepAndProblemJpaEntity connectStepAndProblem( ProblemJpaEntity problem, StepJpaEntity step, int orderNumber) {
+        return StepAndProblemJpaEntity.builder()
+                .problemId(problem.getId())
+                .stepId(step.getId())
+                .orderNumber(orderNumber)
+                .build();
+    }
+
+
+    public List<ProblemJpaEntity> getRandomProblems(int n) throws IOException {
+        List<ProblemJpaEntity> problemJpaEntities = new ArrayList<>();
+        long problemNumber = problemJpaRepository.count();
+        for(int i = 0; i < n; i++){
+            problemJpaEntities.add(
+                    problemJpaRepository.findById((long) (Math.random() * (int)problemNumber + 1)).orElse(null)
+            );
+        }
+
+        return problemJpaEntities;
     }
 
 

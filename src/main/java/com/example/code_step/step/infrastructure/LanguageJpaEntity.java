@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
+
+//예약어
 @Entity
 @NoArgsConstructor
 public class LanguageJpaEntity {

@@ -9,6 +9,7 @@ import java.util.List;
 public interface LearningUnitRepository{
     List<LearningUnitJpaEntity> findByLearningLanguageId(Long learningLanguageId);
     LearningUnitJpaEntity findById(Long id);
-    boolean save(LearningUnitJpaEntity learningUnit);
+    LearningUnitJpaEntity save(LearningUnitJpaEntity learningUnit);
+    List<LearningUnitJpaEntity> saveAll(List<LearningUnitJpaEntity> learningUnits);
 
 }

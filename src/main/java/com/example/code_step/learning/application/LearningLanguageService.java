@@ -7,6 +7,8 @@ import com.example.code_step.learning.domain.LearningLanguage;
 import com.example.code_step.learning.infrastructure.LearningLanguageJpaEntity;
 
 
+import com.example.code_step.learning.infrastructure.LearningUnitJpaEntity;
+import com.example.code_step.learning.presentation.dto.LearningLanguageDto;
 import com.example.code_step.member.application.MemberService;
 import com.example.code_step.member.domain.Member;
 import com.example.code_step.step.application.LanguageService;
@@ -37,21 +39,23 @@ public class LearningLanguageService {
                 .uid(member.getUid())
                 .build();
 
-        save(learningLanguage);
-        return learningLanguage;
+
+        return save(learningLanguage);
     }
 
-    //uid로 현재 공부하고 있는 언어들의 공부상태를 가져온다.
     public List<LearningLanguage> findByUid(String uid) {
-        List<LearningLanguageJpaEntity> entities = learningLanguageRepository.findByUid(uid);
-        List<LearningLanguage> learningLanguages = new ArrayList<>();
-        for (LearningLanguageJpaEntity entity : entities)
-            learningLanguages.add(entity.toModel());
-
-        return learningLanguages;
+        return learningLanguageRepository.findByUid(uid).stream().map(LearningLanguageJpaEntity::toModel).toList();
     }
 
-    public boolean save (LearningLanguage learningLanguage) {
-        return learningLanguageRepository.save(LearningLanguageJpaEntity.from(learningLanguage));
+    public LearningLanguage findById(Long id) {
+        return learningLanguageRepository.findById(id).toModel();
+    }
+
+    public LearningLanguage save (LearningLanguage learningLanguage) {
+        return learningLanguageRepository.save(LearningLanguageJpaEntity.from(learningLanguage)).toModel();
+    }
+
+    public LearningLanguage findByUidAndLanguageId(String uid, Language language) {
+        return learningLanguageRepository.findByUidAndLanguageId(uid, language.getId()).get(0).toModel();
     }
 }

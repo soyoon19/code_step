@@ -35,11 +35,11 @@ public class MemberService {
 
         //재화(보상)를 저장하는 객체 생성 및 저장
         Compensation compensation = Compensation.builder().build();
-        compensationService.save(compensation);
+        compensation = compensationService.save(compensation); //자동으로 생성되는 id 정보를 가져와야 된다.
 
         //Inventory 객체 생성 및 저장
         Inventory inventory = Inventory.builder().build();
-        inventoryService.save(inventory);
+        inventory = inventoryService.save(inventory);
 
         //START Rank 객체 가져오기
         Rank rank = rankService.findById(Rank.START_RANK_ID);
@@ -79,4 +79,7 @@ public class MemberService {
         return memberRepository.findByUid(uid).toModel(inventory, compensation, rank);
     }
 
+    public boolean exists(String uid){
+        return uid == null ? false : memberRepository.exists(uid);
+    }
 }

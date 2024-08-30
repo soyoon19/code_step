@@ -15,7 +15,7 @@ public class CompensationService {
         return compensationRepository.findById(id).toModel();
     }
 
-    public boolean save(Compensation compensation) {
-        return compensationRepository.save(CompensationJpaEntity.from(compensation));
+    public Compensation save(Compensation compensation) {
+        return compensationRepository.save(CompensationJpaEntity.from(compensation)).toModel();
     }
 }

@@ -3,10 +3,12 @@ package com.example.code_step.rank.infrastructure;
 import com.example.code_step.rank.domain.Rank;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 
+//rank : 예약어
 @Entity
 @NoArgsConstructor
 public class RankJpaEntity {

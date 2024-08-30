@@ -2,16 +2,16 @@
   {
     "name": "Java",
     "id": "l001",
-    "imgPath": ""
+    "imgPath": "/language/java.png"
   },
   {
     "name": "Python",
     "id" : "l002",
-    "imgPath" : ""
+    "imgPath" :"/language/python.png"
   },
   {
-    "name" : "C",
+    "name" : "CSS",
     "id" : "l003",
-    "imgPath" : ""
+    "imgPath" : "/language/css.png"
   }
 ]

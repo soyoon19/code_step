@@ -45,9 +45,10 @@ public class LearningStepService {
     }
 
     public void initLearningStep(LearningUnit learningUnit){
-        List<Step> steps = stepService.findByUnitId(learningUnit.getId());
+        List<Step> steps = stepService.findByUnitId(learningUnit.getUnitId());
         LearningStep learningStep;
 
+        System.out.println("step size : " + steps.size());
 
         for(Step step : steps){
             learningStep = LearningStep.builder()
